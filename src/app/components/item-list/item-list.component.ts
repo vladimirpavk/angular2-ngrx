@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ItemModel } from '../../models/item.model';
+import { Item } from '../../models/item.model';
 
 @Component({
   selector: 'app-item-list',
@@ -8,7 +8,7 @@ import { ItemModel } from '../../models/item.model';
 })
 export class ItemListComponent implements OnInit {
 
-  private itemList:ItemModel[] = [];
+  private itemList:Item[] = [];
 
   private itemName:string;
   private itemSize:number;
@@ -17,15 +17,15 @@ export class ItemListComponent implements OnInit {
 
   ngOnInit() {
     this.itemList=[
-      new ItemModel("Peskir", 20),
-      new ItemModel("Papuče", 5),
-      new ItemModel("Igračke", 25)
+      new Item("Peskir", 20),
+      new Item("Papuče", 5),
+      new Item("Igračke", 25)
     ]
   }
 
   public insert():void{
     //console.log(this.itemName+" - "+this.itemSize);
-    this.itemList=[...this.itemList, new ItemModel(this.itemName, this.itemSize)];
+    this.itemList=[...this.itemList, new Item(this.itemName, this.itemSize)];
   }
 
 }

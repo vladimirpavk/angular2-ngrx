@@ -1,4 +1,4 @@
-export class ItemModel{
+export class Item{
     constructor(public name:string,
     public number:number){}
 }
