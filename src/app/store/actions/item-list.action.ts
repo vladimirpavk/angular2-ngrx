@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
 
-import { Item } from '../models/item.model';
+import { Item } from '../../models/item.model';
 
 export const LOAD_ITEMS:string = 'LOAD_ITEM';
 export const LOAD_ITEMS_SUCCESS:string = 'LOAD_ITEM_SUCCESS';

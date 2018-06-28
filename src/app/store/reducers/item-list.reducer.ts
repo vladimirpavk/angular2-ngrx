@@ -1,5 +1,5 @@
-import { Item } from "../models/item.model";
-import * as ItemListAction from './item-list.action';
+import { Item } from "../../models/item.model";
+import * as ItemListAction from '../actions/item-list.action';
 
 export interface ItemListState{
     data:Item[]    
