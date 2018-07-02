@@ -26,5 +26,5 @@ export class AddPeople implements Action{
     constructor(public payload:People){}
 }
 
-export type PeopleActions = LoadPeople | LoadPeopleFail | LoadPeopleSuccess;
+export type PeopleActions = LoadPeople | LoadPeopleFail | LoadPeopleSuccess | AddPeople;
 

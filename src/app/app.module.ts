@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { ItemListComponent } from './components/item-list/item-list.component';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +14,10 @@ import { ItemListComponent } from './components/item-list/item-list.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot({
+      itemList: 
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

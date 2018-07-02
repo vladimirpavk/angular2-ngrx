@@ -6,7 +6,11 @@ export interface ItemListState{
 };
 
 export const initialState:ItemListState = {
-    data:[]
+    data:[ 
+        new Item("Vladimir", 5),
+        new Item("Nataša", 4),
+        new Item("Pavle", 5)
+    ]
 };
 
 export function reducer(state=initialState, action:ItemListAction.ItemsActions):ItemListState{

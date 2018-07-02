@@ -26,5 +26,5 @@ export class AddItem implements Action{
     constructor(public payload:Item){}
 }
 
-export type ItemsActions = LoadItems | LoadItemsFail | LoadItemsSuccess;
+export type ItemsActions = LoadItems | LoadItemsFail | LoadItemsSuccess | AddItem;
 

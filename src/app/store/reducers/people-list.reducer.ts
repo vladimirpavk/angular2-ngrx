@@ -6,7 +6,10 @@ export interface PeopleListState{
 };
 
 export const initialState:PeopleListState = {
-    data:[]
+    data:[
+        new People("Nikola", 6, "m"),
+        new People("Moj sin", 1, "m")
+    ]
 };
 
 export function reducer(state=initialState, action:PeopleListAction.PeopleActions):PeopleListState{
