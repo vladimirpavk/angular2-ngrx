@@ -6,6 +6,8 @@ import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
 import { ItemListComponent } from './components/item-list/item-list.component';
 
+import * as ItemListReducer from './store/reducers/item-list.reducer';
+import * as PeopleListReducer from './store/reducers/people-list.reducer';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,7 @@ import { ItemListComponent } from './components/item-list/item-list.component';
     BrowserModule,
     FormsModule,
     StoreModule.forRoot({
-      itemList: 
+      itemList: ItemListReducer.reducer
     })
   ],
   providers: [],
