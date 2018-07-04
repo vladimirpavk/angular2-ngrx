@@ -5,7 +5,7 @@ export interface ItemListState{
     data:Item[]    
 };
 
-export const initialState:ItemListState = {
+const initialState:ItemListState = {
     data:[ 
         new Item("Vladimir", 5),
         new Item("Nataša", 4),
@@ -24,6 +24,11 @@ export function reducer(state=initialState, action:ItemListAction.ItemsActions):
             return{                
                 data:[...state.data, (<ItemListAction.AddItem>action).payload]
             }
+        }
+        case ItemListAction.REMOVE_ITEM:{
+            return{
+                data: state.data.splice((<ItemListAction.RemoveItem>action).payload, 1)
+            } 
         }
     }
     return state;
