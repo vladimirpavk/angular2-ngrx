@@ -46,4 +46,11 @@ export class ItemListComponent implements OnInit {
     this.store.dispatch(new ItemListActions.RemoveItem(2));
   }
 
+  public addItems():void{
+    this.store.dispatch(new ItemListActions.AddItems([
+      new Item("Tajni agent 1", 1002),
+      new Item("Tajni agent 2", 1003)
+    ]));
+  }
+
 }

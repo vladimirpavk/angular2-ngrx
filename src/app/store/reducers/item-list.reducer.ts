@@ -30,6 +30,11 @@ export function reducer(state=initialState, action:ItemListAction.ItemsActions):
                 data: state.data.splice((<ItemListAction.RemoveItem>action).payload, 1)
             } 
         }
+        case ItemListAction.ADD_ITEMS:{
+            return{
+                data: [...state.data, ...(<ItemListAction.AddItems>action).payload]
+            }
+        }
     }
     return state;
 }
